@@ -3,10 +3,10 @@ import numpy as np
 
 img = cv2.imread("../img/sudoku.jpg")
 
-# 라플라시안 필터 적용 ---①
+# apply Laplacian filter
 edge = cv2.Laplacian(img, -1)
 
-# 결과 출력
+# show image
 merged = np.hstack((img, edge))
 cv2.imshow('Laplacian', merged)
 cv2.waitKey(0)

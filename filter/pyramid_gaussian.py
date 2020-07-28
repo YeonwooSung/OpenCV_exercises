@@ -2,9 +2,10 @@ import cv2
 
 img = cv2.imread('../img/girl.jpg')
 
-# 가우시안 이미지 피라미드 축소
+# reduce image with Gaussian image pyramid
 smaller = cv2.pyrDown(img) # img x 1/4
-# 가우시안 이미지 피라미드 확대
+
+# expand image with Gaussian image pyramid
 bigger = cv2.pyrUp(img) # img x 4
 
 # 결과 출력

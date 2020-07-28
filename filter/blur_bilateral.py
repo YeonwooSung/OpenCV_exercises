@@ -3,13 +3,13 @@ import numpy as np
 
 img = cv2.imread("../img/gaussian_noise.jpg")
 
-# 가우시안 필터 적용 ---①
+# apply Gaussian Blur filter
 blur1 = cv2.GaussianBlur(img, (5,5), 0)
 
-# 바이레터럴 필터 적용 ---②
+# apply bilateral filter
 blur2 = cv2.bilateralFilter(img, 5, 75, 75)
 
-# 결과 출력
+# show result images
 merged = np.hstack((img, blur1, blur2))
 cv2.imshow('bilateral', merged)
 cv2.waitKey(0)

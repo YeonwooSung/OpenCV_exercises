@@ -3,14 +3,15 @@ import numpy as np
 
 img = cv2.imread("../img/sudoku.jpg")
 
-#미분 커널 생성 ---①
+#  generate gradient kernel
 gx_kernel = np.array([[ -1, 1]])
 gy_kernel = np.array([[ -1],[ 1]])
 
-# 필터 적용 ---②
+# apply filters
 edge_gx = cv2.filter2D(img, -1, gx_kernel)
 edge_gy = cv2.filter2D(img, -1, gy_kernel)
-# 결과 출력
+
+# show result image
 merged = np.hstack((img, edge_gx, edge_gy))
 cv2.imshow('edge', merged)
 cv2.waitKey(0)

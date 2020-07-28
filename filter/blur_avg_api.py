@@ -4,9 +4,10 @@ import numpy as np
 file_name = '../img/taekwonv1.jpg'
 img = cv2.imread(file_name)
 
-# blur() 함수로 블러링  ---①
+# bluring with blur()
 blur1 = cv2.blur(img, (10,10))
-# boxFilter() 함수로 블러링 적용 ---②
+
+# bluring with boxFilter()
 blur2 = cv2.boxFilter(img, -1, (10,10))
 
 # 결과 출력

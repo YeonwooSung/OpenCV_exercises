@@ -3,10 +3,10 @@ import numpy as np
 
 img = cv2.imread("../img/sudoku.jpg")
 
-# 케니 엣지 적용 
+# apply Canny edge
 edges = cv2.Canny(img,100,200)
 
-# 결과 출력
+# show result images
 cv2.imshow('Original', img)
 cv2.imshow('Canny', edges)
 cv2.waitKey(0)
